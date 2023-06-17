@@ -1,0 +1,10 @@
+.imgWidth{
+    width: 10%;
+}
+.toggleMargin{
+    margin-left: 10%;
+}
+.disabled-row {
+    opacity: 0.5;
+    pointer-events: none;
+  }
