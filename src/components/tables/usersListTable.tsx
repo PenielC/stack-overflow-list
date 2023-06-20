@@ -17,6 +17,7 @@ import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import LastPageIcon from '@mui/icons-material/LastPage';
 import './usersListTable.css';
 import UsersListRow from './usersListRow';
+import TableHead from '@mui/material/TableHead';
 
 
 interface Props {
@@ -113,6 +114,14 @@ const UsersListTable: React.FC<Props> = ({users}) => {
   return (
     <TableContainer component={Paper}>
       <Table aria-label="collapsible table">
+      <TableHead>
+          <TableRow>
+            <TableCell><strong>Profile Image</strong></TableCell>
+            <TableCell><strong>Name</strong></TableCell>
+            <TableCell><strong>Reputation</strong></TableCell>
+            <TableCell></TableCell>
+          </TableRow>
+        </TableHead>
         <TableBody>
         {(rowsPerPage > 0
             ? users?.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
